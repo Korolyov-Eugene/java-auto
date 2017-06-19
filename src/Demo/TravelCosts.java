@@ -8,10 +8,8 @@ import java.util.Scanner;
 public class TravelCosts {
 
     public static void main(String[] args) {
-        double distance;
-        double mpg;
-        double pricePerGallon;
-        double totalCost;
+        double distance, mpg, pricePerGallon, totalCost;
+        String vehicleType;
 
         Scanner in = new Scanner(System.in);
         System.out.println("Enter total distance in miles: ");
@@ -20,9 +18,11 @@ public class TravelCosts {
         mpg = in.nextDouble();
         System.out.println("Enter the price of one gallon of gas: ");
         pricePerGallon = in.nextDouble();
+        System.out.println("Please enter the vehicle type");
+        vehicleType = in.next();
 
         totalCost = (distance/mpg)*pricePerGallon;
-        System.out.printf("The trip is going to cost $%5.2f", totalCost);
+        System.out.printf("The trip is going to cost $%5.2f since you are driving " + "a " + vehicleType , totalCost);
         System.out.println();
     }
 }
